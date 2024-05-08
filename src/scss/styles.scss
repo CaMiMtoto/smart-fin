@@ -6,9 +6,13 @@
 @import "bootstrap/scss/bootstrap";
 
 
-.menu-link:hover {
-  background-color: $light;
-  color: $primary !important;
+.menu-link {
+  cursor: pointer !important;
+}
+
+.menu-link:hover, .menu-link.active {
+  background-color: $primary-dark;
+  color: $light !important;
 }
 
 #wrapper {
@@ -95,10 +99,26 @@
 }
 
 #aside_toggle {
-  //top: 50%;
-  //right: -15px;
-  //transform: translateY(-50%);
   z-index: 10;
-  //border: 2px solid #d6d8ea;
 }
 
+
+.bullet-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 100% !important;
+  background-color: $light;
+}
+
+.menu-sub-accordion {
+  margin-top: 0 !important;
+  max-height: 0; /* Initially set max-height to 0 */
+  overflow: hidden; /* Hide content that exceeds the max-height */
+  opacity: 0; /* Start fully transparent */
+  transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition for opacity and max-height */
+}
+
+.menu-sub-accordion.show {
+  max-height: 500px; /* Adjust according to the maximum height your submenu might have */
+  opacity: 1; /* Fully visible */
+}

@@ -77,4 +77,24 @@ document.addEventListener('DOMContentLoaded', function () {
             aside.classList.add('aside-hidden');
         }
     });
+
+    const accordions = document.querySelectorAll('[data-toggle="menu-accordion"]');
+
+    accordions.forEach(function(accordion) {
+        accordion.addEventListener('click', function() {
+            const subMenu = this.nextElementSibling; // Selects the immediately following sibling
+            subMenu.classList.toggle('show');
+
+            // Optionally, change the arrow direction
+            const arrowIcon = this.querySelector('.menu-arrow i');
+            if (arrowIcon.classList.contains('bi-chevron-down')) {
+                arrowIcon.classList.remove('bi-chevron-down');
+                arrowIcon.classList.add('bi-chevron-up');
+            } else {
+                arrowIcon.classList.remove('bi-chevron-up');
+                arrowIcon.classList.add('bi-chevron-down');
+            }
+        });
+    });
+
 });
