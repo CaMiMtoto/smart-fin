@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             responsive: true, // Ensure the chart is responsive
             maintainAspectRatio: true, // Add this to not maintain the natural aspect ratio
-            barThickness: 20
+            barThickness: 10
         }
     });
 
