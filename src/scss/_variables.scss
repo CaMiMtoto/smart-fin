@@ -1,0 +1,32 @@
+// Light mode colors
+$primary: #0F5133;
+$secondary: #6c757d;
+$success: #28a745;
+$info: #17a2b8;
+$warning: #FFC244;
+$danger: #dc3545;
+$light: #f8f9fa;
+$dark: #343a40;
+
+// Dark mode colors
+$dark-primary: #4248b5;
+$dark-secondary: #343a40;
+$dark-success: #227833;
+$dark-info: #117a8b;
+$dark-warning: #e0a800;
+$dark-danger: #c82333;
+$dark-light: #212529;
+$dark-dark: #121416;
+
+$font-family-sans-serif: Rubik;
+$breadcrumb-font-size:              null;
+$breadcrumb-padding-y:              0;
+$breadcrumb-padding-x:              0;
+$breadcrumb-item-padding-x:         .5rem;
+$breadcrumb-margin-bottom:          1rem;
+$breadcrumb-bg:                     null;
+$breadcrumb-divider-color:         $light;
+$breadcrumb-active-color:           $light;
+$breadcrumb-divider:                quote("/");
+$breadcrumb-divider-flipped:        $breadcrumb-divider;
+$breadcrumb-border-radius:          null;

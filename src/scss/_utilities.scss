@@ -1,0 +1,91 @@
+// Define scales for your utilities
+$spacing-scales: (0, 0.25rem, 0.5rem, 1rem, 1.5rem, 2rem, 2.5rem, 3rem);
+$size-scales: (25%, 50%, 75%, 100%);
+$z-index-scales: (0, 10, 20, 30, 40, 50);
+
+// Generate margin and padding utilities
+@each $size in $spacing-scales {
+  $index: index($spacing-scales, $size);
+
+  .m-#{$index} {
+    margin: $size;
+  }
+  .mt-#{$index} {
+    margin-top: $size;
+  }
+  .mr-#{$index} {
+    margin-right: $size;
+  }
+  .mb-#{$index} {
+    margin-bottom: $size;
+  }
+  .ml-#{$index} {
+    margin-left: $size;
+  }
+  .mx-#{$index} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+  .my-#{$index} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .p-#{$index} {
+    padding: $size;
+  }
+  .pt-#{$index} {
+    padding-top: $size;
+  }
+  .pr-#{$index} {
+    padding-right: $size;
+  }
+  .pb-#{$index} {
+    padding-bottom: $size;
+  }
+  .pl-#{$index} {
+    padding-left: $size;
+  }
+  .px-#{$index} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+  .py-#{$index} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+  .h-#{$index} {
+    height: $size;
+  }
+  .w-#{$index} {
+    width: $size;
+  }
+}
+
+// Generate width and height utilities
+
+
+// Generate z-index utilities
+@each $z in $z-index-scales {
+  .z-#{$z} {
+    z-index: $z;
+  }
+}
+
+// Generate text color utilities
+$colors: (
+        'gray-100': #f8f9fa,
+        'gray-200': #e9ecef,
+        'gray-300': #dee2e6,
+        'gray-400': #ced4da,
+        'gray-500': #adb5bd,
+        'gray-600': #6c757d,
+        'gray-700': #495057,
+        'gray-800': #343a40,
+        'gray-900': #212529,
+);
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}

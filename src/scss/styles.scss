@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import "bootstrap-icons/font/bootstrap-icons.min.css";
+@import "variables";
+@import "utilities";
+// Import all of Bootstrap's CSS
+@import "bootstrap/scss/bootstrap";
+
+
+.menu-link:hover {
+  background-color: $light;
+  color: $primary !important;
+}
+
+#wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../assets/bg/main.png");
+  background-position: top;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  opacity: 0.2; /* Adjust opacity here */
+  z-index: 0;
+}
+
+#overlay {
+  background-color: $primary !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@media (min-width: 992px) {
+  #overlay {
+    height: 35vh !important;
+  }
+}
+
+//mobile
+@media (max-width: 991px) {
+  #overlay {
+    height: 50vh !important;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+
+/*.aside.aside-hidden {
+  opacity: 0;
+  display: none !important;
+}*/
+
+.aside {
+  visibility: visible; /* Default */
+  transform: translateX(0); /* Default */
+  position: relative;
+  z-index: 2;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+}
+
+.aside.aside-hidden {
+  opacity: 0;
+  visibility: hidden; /* Hide but allow for transition */
+  transform: translateX(-100%); /* Move off-screen */
+  transition: all 0.4s ease;
+  width: 0 !important;
+  border-right: none !important;
+}
+
+
+// large screen position of aside menu is relative
+@media (min-width: 992px) {
+  .aside {
+    position: relative;
+  }
+}
+
+#aside_toggle {
+  //top: 50%;
+  //right: -15px;
+  //transform: translateY(-50%);
+  z-index: 10;
+  //border: 2px solid #d6d8ea;
+}
+

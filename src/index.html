@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Smart Fin
+    </title>
+    <script type="module" src="./js/main.js"></script>
+    <link rel="stylesheet" href="./css/tailwind.css">
+</head>
+<body>
+<div class="d-flex min-vh-100 position-relative">
+    <aside class="min-vh-100 bg-primary border-end border-white border-3 flex-shrink-0 aside">
+        <div class="d-flex justify-content-center align-items-center my-4 w-100">
+            <img src="./assets/logos/logo_sm.png" class="tw-h-16" alt="Logo small"/>
+        </div>
+
+        <div>
+            <div class="d-flex flex-column px-3 gap-3">
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-primary text-decoration-none menu-link bg-white rounded">
+                    <i class="bi bi-speedometer2 fs-5"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-white text-decoration-none menu-link rounded">
+                    <i class="bi bi-people-fill fs-5"></i>
+                    <span>Customers</span>
+                </a>
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-white text-decoration-none menu-link rounded">
+                    <i class="bi bi-stack fs-5"></i>
+                    <span>Brands</span>
+                </a>
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-white text-decoration-none menu-link rounded">
+                    <i class="bi bi-kanban fs-5"></i>
+                    <span> Projects</span>
+                </a>
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-white text-decoration-none menu-link rounded">
+                    <i class="bi bi-pie-chart-fill fs-5"></i>
+                    <span>Sales</span>
+                </a>
+                <a href="#"
+                   class="tw-flex align-items-center gap-2 px-3 py-2 text-white text-decoration-none menu-link rounded">
+                    <i class="bi bi-calendar-event fs-5"></i>
+                    <span>Events</span>
+                </a>
+            </div>
+        </div>
+
+    </aside>
+    <main class="flex-grow-1" id="wrapper">
+        <div id="overlay"></div>
+        <div class="content">
+            <div class="container-fluid bg-primary">
+                <nav class="border-bottom border-2 py-3">
+                    <div class="container-fluid d-flex justify-content-between align-items-center">
+                        <div class="btn p-0 tw-text-white border-0" id="aside_toggle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M4 6l16 0"/>
+                                <path d="M4 12l16 0"/>
+                                <path d="M4 18l16 0"/>
+                            </svg>
+                        </div>
+                        <a class="navbar-brand " href="#">
+                            <img src="./assets/logos/logo_lg.png" alt="Logo small"
+                                 class="d-inline-block align-text-top"/>
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <ul class="ms-auto mb-2 mb-lg-0 d-flex gap-4 tw-text-white tw-list-none">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">
+                                    <i class="bi bi-app-indicator fs-4"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <i class="bi bi-person fs-4"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end rounded-3">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="#">Help</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    </div>
+                </nav>
+            </div>
+
+            <div class="container-fluid px-5 py-4">
+                <!--       <nav aria-label="breadcrumb ">
+                           <ol class="breadcrumb">
+                               <li class="breadcrumb-item"><a href="#" class="text-white text-decoration-none">Home</a></li>
+                               <li class="breadcrumb-item active" aria-current="page">Library</li>
+                           </ol>
+                       </nav>-->
+
+                <div class="text-white ">
+                    <h1 class="h3">Dashboard</h1>
+                    <p class="text-gray-400 small">
+                        Welcome to Smart Fin , a simple and intuitive dashboard to manage your business.
+                    </p>
+                </div>
+
+                <!--    start of overview-->
+                <div class="row mt-3">
+                    <div class="h-100 my-2 col-md-6 col-xl-3">
+                        <div class="card card-body  rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between ">
+                                <div>
+                                    <h4>Total Sales</h4>
+                                    <p class="text-gray-700 small">
+                                        1 January - 31 March
+                                    </p>
+
+                                </div>
+                                <div>
+                                    <div class="px-3 py-2 rounded-3 d-flex justify-content-center align-items-center text-primary-emphasis bg-primary-subtle">
+                                        <i class="bi bi-wallet fs-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="border-secondary-subtle"/>
+                            <h3 class="text-primary-emphasis mt-3">
+                                1,200
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="h-100 my-2 col-md-6 col-xl-3">
+                        <div class="card card-body  rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between ">
+                                <div>
+                                    <h4>Total Loan</h4>
+                                    <p class="text-gray-700 small">
+                                        1 January - 31 March
+                                    </p>
+
+                                </div>
+                                <div>
+                                    <div class="px-3 py-2 rounded-3 d-flex justify-content-center align-items-center text-danger-emphasis bg-danger-subtle">
+                                        <i class="bi bi-wallet fs-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="border-danger-subtle"/>
+                            <h3 class="text-danger-emphasis mt-3">
+                                1,2000,000
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="h-100 my-2 col-md-6 col-xl-3">
+                        <div class="card card-body  rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between ">
+                                <div>
+                                    <h4>Total Projects</h4>
+                                    <p class="text-gray-700 small">
+                                        1 January - 31 March
+                                    </p>
+
+                                </div>
+                                <div>
+                                    <div class="px-3 py-2 rounded-3 d-flex justify-content-center align-items-center text-info-emphasis bg-info-subtle">
+                                        <i class="bi bi-book fs-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="border-info-subtle"/>
+                            <h3 class="text-info-emphasis mt-3">
+                                1,2000,000
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="h-100 my-2 col-md-6 col-xl-3">
+                        <div class="card card-body  rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between ">
+                                <div>
+                                    <h4>Total Projects</h4>
+                                    <p class="text-gray-700 small">
+                                        1 January - 31 March
+                                    </p>
+
+                                </div>
+                                <div>
+                                    <div class="px-3 py-2 rounded-3 d-flex justify-content-center align-items-center text-info-emphasis bg-info-subtle">
+                                        <i class="bi bi-book fs-4"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr class="border-info-subtle"/>
+                            <h3 class="text-info-emphasis mt-3">
+                                1,2000,000
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+                <!--    end of overview-->
+
+                <!--                charts-->
+                <div class="row mt-3">
+                    <div class="col-lg-6">
+                        <div class="card card-body  rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h4>
+                                        Revenue Transactions
+                                    </h4>
+                                    <p class="text-muted small">
+                                        Latest transactions all the time
+                                    </p>
+                                </div>
+                                <div>
+                                    <button class="btn bg-light border-light-subtle rounded-3 text-secondary fw-semibold">
+                                        <i class="bi bi-filter"></i> Filter
+                                    </button>
+                                </div>
+                            </div>
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card card-body  h-100 rounded-4 border-light-subtle">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <h4>
+                                        Loan Transactions
+                                    </h4>
+                                    <p class="text-muted small">
+                                        Latest loan transactions history
+                                    </p>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+
+                            <div class="table-responsive table-sm">
+                                <table class="table">
+                                    <thead class="tw-text-xs tw-text-gray-700 tw-uppercase tw-bg-gray-50">
+                                    <tr class="tw-text-base">
+                                        <th>Loan ID</th>
+                                        <th>Customer</th>
+                                        <th>Amount</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr class="tw-text-sm">
+                                        <td>1</td>
+                                        <td>John Doe</td>
+                                        <td>2,000</td>
+                                        <td>1 Jan 2021</td>
+                                        <td><span class="badge bg-info-subtle text-info  rounded-pill">Pending</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr class="tw-text-sm">
+                                        <td>2</td>
+                                        <td>Jean Paul Byiringiro
+                                        <td>200,000</td>
+                                        <td>1 Jan 2024</td>
+                                        <td><span
+                                                class="badge bg-success-subtle text-success rounded-pill">Approved</span>
+                                        </td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+</div>
+<!--<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>-->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const ctx = document.getElementById('revenueChart').getContext('2d');
+        const revenueChart = new Chart(ctx, {
+            type: 'bar', // Defines the type of chart
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June'], // X-axis labels
+                datasets: [{
+                    label: 'Revenue',
+                    data: [12000, 19000, 17000, 21000, 24000, 22000], // Sample data
+                    backgroundColor: 'rgb(15,81,51,0.8)', // Color of the dots
+                    borderColor: 'rgb(4,63,36,0.9)', // Color of the line
+                    borderWidth: 1,
+                    tension: 0.3,
+                    borderRadius: 10
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true, // Start the y-axis from 0
+                        title: {
+                            display: true,
+                            text: 'Revenue (USD)' // Y-axis label
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month' // X-axis label
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true, // Enable legend (useful if multiple datasets)
+                        position: 'top', // Position of legend
+                    }
+                },
+                responsive: true, // Ensure the chart is responsive
+                maintainAspectRatio: true, // Add this to not maintain the natural aspect ratio
+                barThickness: 20
+            }
+        });
+
+        // Toggle the sidebar
+        const asideToggle = document.getElementById('aside_toggle');
+        const aside = document.querySelector('.aside');
+        asideToggle.addEventListener('click', function () {
+            // Toggle the sidebar by adding/removing the 'aside-hidden' class
+            aside.classList.toggle('aside-hidden');
+        });
+        // listen when browser is resized
+        window.addEventListener('resize', function () {
+            // check if the browser width is less than 992px
+            if (window.innerWidth < 992) {
+                // Add the 'aside-hidden' class to the sidebar
+                aside.classList.add('aside-hidden');
+            } else {
+                // Remove the 'aside-hidden' class from the sidebar
+                aside.classList.remove('aside-hidden');
+            }
+        });
+        // listen when clicked outside the sidebar
+        window.addEventListener('click', function (e) {
+            // check if the clicked element is not the sidebar and not aside_toggle and their children i.e this should be on small screen only
+            // check the browser width is less than 992px
+
+            if (!aside.contains(e.target) && e.target !== asideToggle && !asideToggle.contains(e.target) && window.innerWidth < 992) {
+                // Add the 'aside-hidden' class to the sidebar
+                aside.classList.add('aside-hidden');
+            }
+        });
+    });
+</script>
+
+
+</body>
+</html>
